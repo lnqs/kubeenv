@@ -47,3 +47,16 @@ where NAME is the name of an existing environment to delete it.
 ### Disable prompt-change
 If you want to disable adding the env's name to your shell's prompt, set the
 environment-variable `KUBEENV_DISABLE_PROMPT` to `1`.
+
+### Enable completion
+To enable bash completion, add `source PATH/completion.bash` to your `.bashrc`.
+
+The competion can also be used in zsh. source the file in your `.zshrc` and make
+sure bashcomp is set up, i.e. the lines
+
+```
+autoload -Uz bashcompinit
+bashcompinit
+```
+
+are present it in your `.zshrc`.
