@@ -43,3 +43,7 @@ kubeenv-rm NAME
 ```
 
 where NAME is the name of an existing environment to delete it.
+
+### Disable prompt-change
+If you want to disable adding the env's name to your shell's prompt, set the
+environment-variable `KUBEENV_DISABLE_PROMPT` to `1`.

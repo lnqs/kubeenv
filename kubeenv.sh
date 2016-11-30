@@ -17,16 +17,20 @@ function kubeenv() {
     KUBECONFIG="$HOME/.kubeenv/$KUBEENV"
     export KUBECONFIG
 
-    KUBEENV_PRE_PS1="$PS1"
-    PS1="($1) $PS1"
+    if [ x"$KUBEENV_DISABLE_PROMPT" != x"1" ]; then
+        KUBEENV_PRE_PS1="$PS1"
+        PS1="($1) $PS1"
+    fi
 }
 
 function kubeenv-disable() {
-    PS1="$KUBEENV_PRE_PS1"
-
     unset KUBECONFIG
     unset KUBEENV
-    unset KUBEENV_PRE_PS1
+
+    if [ x"$KUBEENV_DISABLE_PROMPT" != x"1" ]; then
+        PS1="$KUBEENV_PRE_PS1"
+        unset KUBEENV_PRE_PS1
+    fi
 }
 
 function kubeenv-rm() {
