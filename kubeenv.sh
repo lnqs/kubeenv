@@ -49,5 +49,5 @@ function kubeenv-rm() {
         return 2
     fi
 
-    rm -f "$HOME/.kubeenv/$KUBEENV"
+    rm -f "$HOME/.kubeenv/$1"
 }
