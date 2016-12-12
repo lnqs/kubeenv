@@ -5,7 +5,7 @@ function kubeenv() {
     fi
 
     if [ x"$KUBEENV" != x"" ]; then
-        kubeenv-disable
+        kubeenv_disable
     fi
 
     KUBEENV="$1"
