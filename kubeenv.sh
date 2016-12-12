@@ -23,7 +23,7 @@ function kubeenv() {
     fi
 }
 
-function kubeenv-disable() {
+function kubeenv_disable() {
     unset KUBECONFIG
     unset KUBEENV
 
@@ -33,7 +33,7 @@ function kubeenv-disable() {
     fi
 }
 
-function kubeenv-rm() {
+function kubeenv_rm() {
     if [ x"$#" != x"1" ]; then
         echo "Usage: kubeenv-rm NAME" >&2
         return 2

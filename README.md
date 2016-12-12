@@ -30,7 +30,7 @@ it'll affect only this environment.
 Execute
 
 ```
-kubeenv-deactivate
+kubeenv_deactivate
 ```
 
 to deactivate the current environment and use the global k8s configuration again.
@@ -39,7 +39,7 @@ to deactivate the current environment and use the global k8s configuration again
 Run
 
 ```
-kubeenv-rm NAME
+kubeenv_rm NAME
 ```
 
 where NAME is the name of an existing environment to delete it.
