@@ -35,12 +35,12 @@ function kubeenv_disable() {
 
 function kubeenv_rm() {
     if [ x"$#" != x"1" ]; then
-        echo "Usage: kubeenv-rm NAME" >&2
+        echo "Usage: kubeenv_rm NAME" >&2
         return 2
     fi
 
-    if [ x"$KUBEENV" == x"$1" ]; then
-        echo "Can't delete active kubeenv. Run kubeenv-disable before" >&2
+    if [ x"$KUBEENV" = x"$1" ]; then
+        echo "Can't delete active kubeenv. Run kubeenv_disable before" >&2
         return 2
     fi
 
